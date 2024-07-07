@@ -41,8 +41,8 @@ const profileSlice = createSlice({
   name: "profile",
   initialState,
   reducers: {
-    profile(state, action: PayloadAction<{ profile: ProfileInterface }>) {
-      return (state = action.payload.profile);
+    profile(_, action: PayloadAction<{ profile: ProfileInterface }>) {
+      return action.payload.profile;
     },
     updatePhoto(state, action: PayloadAction<{ photoUrl: string }>) {
       state.image = action.payload.photoUrl;

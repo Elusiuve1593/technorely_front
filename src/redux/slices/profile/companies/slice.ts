@@ -27,10 +27,10 @@ const companySlice = createSlice({
   initialState,
   reducers: {
     fetchCompanies(
-      state,
+      _,
       action: PayloadAction<{ companies: CompaniesInterface[] }>
     ) {
-      return (state = action.payload.companies);
+      return action.payload.companies;
     },
     getCompany(state, action: PayloadAction<{ company: CompaniesInterface }>) {
       return state.map(() => action.payload.company);

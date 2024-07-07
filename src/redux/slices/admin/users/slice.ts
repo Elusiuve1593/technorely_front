@@ -30,8 +30,8 @@ const profileByAdminSlice = createSlice({
   name: "profile",
   initialState,
   reducers: {
-    fetchUsers(state, action: PayloadAction<{ users: ProfileInterface[] }>) {
-      return (state = action.payload.users);
+    fetchUsers(_, action: PayloadAction<{ users: ProfileInterface[] }>) {
+      return action.payload.users;
     },
     updateUser(
       state,
